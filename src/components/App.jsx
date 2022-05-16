@@ -39,7 +39,7 @@ class App extends React.Component {
           onLeaveFeedback={this.handleChange}
         />
 
-        {this.countTotalFeedback(this.state) > 0 ? (
+        {this.countTotalFeedback() > 0 ? (
           <Statistics
             good={good}
             neutral={neutral}
