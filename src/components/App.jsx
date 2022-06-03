@@ -23,13 +23,13 @@ class App extends React.Component {
     return Math.round(sum > 0 ? (good * 100) / sum : 0);
   };
 
-  handleChange = evt => {
-    const { name } = evt.target;
-    this.setState(state => ({ [name]: state[name] + 1 }));
+  handleChange = key => {
+    this.setState(state => ({ [key]: state[key] + 1 }));
   };
 
   render() {
     const { good, neutral, bad } = this.state;
+
     const nameButton = Object.keys(this.state);
 
     return (

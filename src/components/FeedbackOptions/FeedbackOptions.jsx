@@ -2,7 +2,6 @@ import s from './feedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-
   return (
     <div>
       {options.map(key => {
@@ -10,8 +9,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           <button
             className={s.button}
             key={key}
-            name={key}
-            onClick={onLeaveFeedback}
+            onClick={() => onLeaveFeedback(key)}
           >
             {key}
           </button>
